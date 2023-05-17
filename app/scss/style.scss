@@ -3,22 +3,76 @@
 @import "reset";
 @import "global";
 
+// <------------- HEADER------------->
 
+.header {
+    
+   
+    background: center / cover no-repeat url(../images/bg1.png);
 
-// <------------- NAME SECTION ------------->
+    &__inner {
+        padding: 75px 0;
+    }
+    &__top {
+        display: flex;
+        margin-bottom: 100px;
+    }
+    &__info {
+        padding: 60px 0;
+    }
+    &__subtitle {
+        font-size: 20px;
+        line-height: 40px;
+        @extend %space-700;
+        border: 1px solid $accent;
+        max-width: 355px;
+        padding: 0 10px;
+        margin-bottom: 10px;
+        background-color: rgba(99, 61, 255, 0.2);
+    }
+    &__title {
+        font-size: 45px;
+        line-height: 67px;
+        @extend %space-700;
+        margin-bottom: 30px;
+    }
+    &__text {
+        margin-bottom: 60px;
+    }
+    &__btn {
+        width: 236px;
+        height: 72px;
+        border: 2px solid $accent;
+        border-radius: 0.5em;
+        color: $default;
+        background-color: rgba(99, 61, 255, 0.1);
+        box-shadow: 0px 0px 64px rgba(99, 61, 255, 0.55);
+        backdrop-filter: blur(2px);
+        background: rgba(255, 255, 255, 0.01);
+    }
 
-// <------------- NAME SECTION ------------->
-
-// <------------- NAME SECTION ------------->
-
-// <------------- NAME SECTION ------------->
-
-// <------------- NAME SECTION ------------->
-
-// <------------- NAME SECTION ------------->
-
-
-
-
+    &__img {
+        margin-left: 140px;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__point {
+        max-width: 260px;
+        font-size: 15px;
+        line-height: 28px;
+    }
+    &__point-img {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        // box-shadow: 0px 0px 18px rgba(99, 61, 255, 0.65);
+        filter: drop-shadow(0px 4px px rgba(0, 0, 0, 0.25));
+        background: rgba(255, 255, 255, 0.05);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+}
 
 @import "media";
