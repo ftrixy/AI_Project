@@ -1,0 +1,43 @@
+.popup {
+    position: fixed;
+    max-width: 650px;
+    max-height: 740px;
+    background-color: rgba(255, 255, 255, 1);
+    color: $accent;
+    border-radius: 30px;
+    top: 10%;
+    left: 35%;
+    right: 0;
+    padding: 50px;
+
+    opacity: 0;
+    visibility: hidden;
+  
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__content {
+        color: $accent;
+        position: relative;
+        
+    }
+    &__close{
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 20px;
+    }
+}
+
+.popup.open{
+    opacity: 1;
+    visibility: visible;
+}
+// .popup.open .popup__content {
+//     transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+//     opacity: 1;
+// }
