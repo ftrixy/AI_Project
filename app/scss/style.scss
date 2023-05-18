@@ -6,10 +6,9 @@
 // <------------- HEADER------------->
 
 .header {
-    
-   
-    background: center / cover no-repeat url(../images/bg1.png);
-
+    &__container{
+      background: center / cover no-repeat url(../images/bg1.png);  
+    }
     &__inner {
         padding: 75px 0;
     }
@@ -40,22 +39,10 @@
         margin-bottom: 60px;
     }
     &__btn {
-        width: 236px;
-        height: 72px;
-        border: 2px solid $accent;
-        border-radius: 0.5em;
-        color: $default;
-        background-color: rgba(99, 61, 255, 0.1);
-        backdrop-filter: blur(2px);
-        background: rgba(255, 255, 255, 0.01);
-        cursor: pointer;
-        transition: all 0.5s;
-        
+        @extend %btn;
     }
-    &__btn:hover{
-        transition: all 0.5s;
-        transform: scale(1.1);
-        box-shadow: 0px 0px 64px rgba(99, 61, 255, 0.55);
+    &__btn:hover {
+        @extend %btn_hover;
     }
 
     &__img {
@@ -79,6 +66,210 @@
         height: 40px;
         border-radius: 5px;
         margin-bottom: 15px;
+    }
+}
+
+// <------------- ABOUT------------->
+
+.about {
+    &__container{
+     background: center / cover no-repeat url(../images/bg2.png);   
+    }
+    &__inner{
+        padding: 75px 0;
+    }
+    &__title {
+        font-size: 45px;
+        line-height: 67px;
+        @extend %space-700;
+        max-width: 730px;
+        position: relative;
+    }
+    &__title::before {
+        position: absolute;
+        content: "";
+        width: 740px;
+        height: 70px;
+        border: 1px solid $accent;
+        background-color: rgba(99, 61, 255, 0.2);
+        left: -10px;
+        top: 0;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        padding: 75px 0;
+    }
+
+    &__item-info {
+        margin: 50px 0 0 0;
+        max-width: 620px;
+    }
+    &__item-title {
+        font-size: 34px;
+        line-height: 50px;
+        @extend %space-700;
+        margin: 0 0 60px 30px;
+        position: relative;
+    }
+    &__item-title::before {
+        position: absolute;
+        content: "";
+        width: 7px;
+        height: 24px;
+        background-color: $default;
+        left: -20px;
+        top: 14px;
+    }
+    &__item-paragraph {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__item-text {
+        margin: 0 0 40px 30px;
+    }
+}
+
+.about__item-img.about__img2 {
+    order: 2;
+}
+
+// <------------- WORK------------->
+
+.work {
+    &__container{
+     background: top / cover no-repeat url(../images/bg3.png);   
+    }
+    &__inner{
+        padding: 75px 0;
+    }
+    &__inner-top {
+        margin-bottom: 200px;
+    }
+    &__title {
+        font-size: 55px;
+        line-height: 85px;
+        @extend %space-700;
+        position: relative;
+        margin-bottom: 65px;
+    }
+    &__title::before {
+        position: absolute;
+        content: "";
+        width: 795px;
+        height: 75px;
+        border: 1px solid $accent;
+        background-color: rgba(99, 61, 255, 0.2);
+        left: -10px;
+        top: 10px;
+    }
+    &__btn {
+        @extend %btn;
+    }
+    &__btn:hover {
+        @extend %btn_hover;
+    }
+    &__inner-bottom {
+        display: flex;
+    }
+
+    &__info {
+        width: 50%;
+        margin-left: 30px;
+        img {
+            border-radius: 50px;
+        }
+    }
+    &__subtitle {
+        font-size: 45px;
+        line-height: 70px;
+        @extend %space-700;
+        margin-bottom: 55px;
+        position: relative;
+    }
+    &__subtitle::before {
+        position: absolute;
+        content: "";
+        width: 110px;
+        height: 60px;
+        border: 1px solid $accent;
+        background-color: rgba(99, 61, 255, 0.2);
+        left: -13px;
+        top: 7px;
+    }
+}
+
+.accordeon__list {
+    display: flex;
+    flex-direction: column;
+    // gap: 30px;
+    border: 2px solid $default;
+    border-radius: 10px;
+    width: 50%;
+    min-height: 100%;
+    :last-child {
+        border-bottom: none;
+    }
+}
+
+.spoiler {
+    width: auto;
+    color: $default;
+    border-bottom: 2px solid $default;
+    padding: 20px;
+
+    &__preview {
+        cursor: pointer;
+        padding-top: 0;
+        padding-bottom: 0;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        position: relative;
+    }
+    &__preview::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid $default;
+        border-radius: 50px;
+        right: 0;
+        top: 15px;
+    }
+    &__icon {
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    &__title {
+        font-size: 18px;
+        line-height: 34px;
+        @extend %outfit-500;
+    }
+    &__wrapper {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    &__body {
+        padding-top: 10px;
+        padding-bottom: 0;
+        height: 133px;
+        font-size: 15px;
+        line-height: 26px;
+        @extend %outfit-400;
+        color: $default;
+        opacity: 0.5;
+    }
+}
+
+.spoiler.opened {
+    .spoiler__preview::after {
+        transform: rotate(180deg);
     }
 }
 
