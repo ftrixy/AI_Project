@@ -35,11 +35,19 @@ function toggleAccordion(e) {
 
 
 // Відкриття та закриття модального вікна
-const popupBtn = document.querySelector('.header__btn');
+const popupBtnHeader = document.querySelector('.header__btn');
+const popupBtnWork = document.querySelector('.work__btn');
+const popupBtnFaq = document.querySelector('.faq__btn');
 const popup = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
 
-popupBtn.addEventListener('click', () => {
+popupBtnHeader.addEventListener('click', () => {
+    popup.classList.toggle('open');
+});
+popupBtnWork.addEventListener('click', () => {
+    popup.classList.toggle('open');
+});
+popupBtnFaq.addEventListener('click', () => {
     popup.classList.toggle('open');
 });
 popupClose.addEventListener('click', () => {
