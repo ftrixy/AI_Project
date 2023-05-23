@@ -3,12 +3,13 @@
     max-width: 650px;
     max-height: 740px;
     background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 64px rgba(99, 61, 255, 1);
     color: #000;
     border-radius: 30px;
-    top: 10%;
-    left: 27%;
+    top: 0;
     right: 0;
     padding: 20px;
+    margin: 20px;
 
     opacity: 0;
     visibility: hidden;
@@ -19,7 +20,6 @@
         @extend %outfit-500;
         color: #000;
     }
-  
 
     &__body {
         min-height: 100%;
@@ -30,9 +30,8 @@
     &__content {
         color: $accent;
         position: relative;
-        
     }
-    &__close{
+    &__close {
         position: absolute;
         right: 0;
         top: 0;
@@ -45,31 +44,30 @@
         cursor: pointer;
     }
 
-
-    &__content-top{
+    &__content-top {
         display: flex;
         justify-content: flex-start;
         align-items: baseline;
     }
-    &__title{
+    &__title {
         font-size: 45px;
         line-height: 67px;
         @extend %space-700;
         margin-right: 87px;
         color: #000;
     }
-    &__subtitle{
+    &__subtitle {
         font-size: 20px;
         line-height: 67px;
         @extend %space-700;
         color: #000;
     }
-    &__info{
+    &__info {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 30px;
     }
-    &__info-item{
+    &__info-item {
         width: 48%;
         margin: 0 5px 5px 5px;
         input {
@@ -83,59 +81,54 @@
         }
     }
     &__info-item {
-        input::placeholder{
+        input::placeholder {
             font-size: 15px;
             line-height: 28px;
             @extend %outfit-400;
-            color: #B6B6B6
+            color: #b6b6b6;
         }
     }
-
-
-
-    &__content-bottom{
+    &__content-bottom {
         display: flex;
     }
-    &__info-btn{
+    &__info-btn {
         @extend %btn;
         color: #000;
         margin-left: 5px;
-        width: 293px; 
+        width: 293px;
     }
-    &__info-btn:hover{
+    &__info-btn:hover {
         @extend %btn_hover;
         color: #000;
         margin-left: 5px;
-        width: 293px; 
+        width: 293px;
     }
-    &__info-checkbox{
+    &__info-checkbox {
         display: flex;
         align-items: start;
         margin-left: 5px;
-        input{
+        input {
             margin: 5px 20px 0 15px;
             width: 20px;
             height: 20px;
             border: 2px solid #000;
             border-radius: 5px;
+            cursor: pointer;
         }
-        p{
-           max-width: 220px;
-           font-size: 15px;
-           line-height: 22px;
-           @extend %outfit-400;
+        p {
+            max-width: 220px;
+            font-size: 15px;
+            line-height: 22px;
+            @extend %outfit-400;
         }
     }
 }
 
-.popup__info-item.popup__info-methods{
+.popup__info-item.popup__info-methods {
     width: 100%;
 }
 
-
-
-
-.popup.open{
+.popup.open {
     opacity: 1;
     visibility: visible;
 }

@@ -284,7 +284,7 @@
     &__inner {
         padding: 75px 0;
     }
-    &__title{
+    &__title {
         font-size: 45px;
         line-height: 67px;
         @extend %space-700;
@@ -302,20 +302,19 @@
         right: 120px;
         top: 7px;
     }
-    &__btn{
+    &__btn {
         @extend %btn;
         margin-bottom: 220px;
     }
     &__btn:hover {
         @extend %btn_hover;
     }
-    &__subtitle{
+    &__subtitle {
         font-size: 45px;
         line-height: 70px;
         @extend %space-700;
         margin-bottom: 50px;
     }
-    
 }
 
 .faq-accordion__list {
@@ -383,6 +382,12 @@
         @extend %outfit-400;
         color: $default;
         opacity: 0.5;
+    }
+}
+
+.faq-spoiler.opened {
+    .faq-spoiler__preview::after {
+        transform: rotate(180deg);
     }
 }
 

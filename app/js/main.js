@@ -40,17 +40,22 @@ const popupBtnWork = document.querySelector('.work__btn');
 const popupBtnFaq = document.querySelector('.faq__btn');
 const popup = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
+const body = document.querySelector('.body');
 
 popupBtnHeader.addEventListener('click', () => {
     popup.classList.toggle('open');
+    body.classList.toggle('body--lock');
 });
 popupBtnWork.addEventListener('click', () => {
     popup.classList.toggle('open');
+    body.classList.toggle('body--lock');
 });
 popupBtnFaq.addEventListener('click', () => {
     popup.classList.toggle('open');
+    body.classList.toggle('body--lock');
 });
 popupClose.addEventListener('click', () => {
     popup.classList.remove('open');
+    body.classList.toggle('body--lock');
 });
 

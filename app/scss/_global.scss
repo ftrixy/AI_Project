@@ -46,6 +46,10 @@ main{
 //     z-index: 100;
 // }
 
+body.body--lock {
+    overflow: hidden;
+}
+
 .footer {
     min-width: 100%; 
 }
