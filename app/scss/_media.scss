@@ -47,6 +47,10 @@
             gap: 5px;
         }
     }
+    .popup {
+        top: 50px;
+        left: 20%;
+    }
 }
 
 @media (max-width: 850px) {
@@ -118,6 +122,10 @@
         &__btn {
             margin-bottom: 100px;
         }
+    }
+    .popup {
+        top: 0;
+        left: 0;
     }
 }
 
@@ -203,6 +211,8 @@
     .popup {
         max-height: 100%;
         box-shadow: 0px 0px 64px rgba(99, 61, 255, 1);
+        top: 0;
+        left: 20%;
         p {
             font-size: 12px;
             line-height: 20px;
@@ -333,5 +343,9 @@
             font-size: 15px;
             line-height: 25px;
         }
+    }
+    .popup {
+        top: 0;
+        left: 0;
     }
 }
